@@ -1,0 +1,34 @@
+﻿@model List<PuestosModel>
+
+<div class="card card-default">
+    <div class="card-header">
+        <h2>Puestos</h2>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Descripcion</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
